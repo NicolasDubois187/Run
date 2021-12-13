@@ -54,6 +54,18 @@ section button {
   grid-template-columns: 40% 60%;
   align-items: center;
   height: 400px;
+  position: relative;
+}
+.magna::before {
+  content: "";
+  position: absolute;
+  height: 1.2px;
+  width: 100%;
+  background: rgba(107, 104, 104, 0.247);
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: rgba(134, 126, 126, 0.685);
 }
 
 .magna-img {
@@ -66,14 +78,107 @@ section button {
   grid-template-columns: 70% 30%;
   align-items: center;
   height: 400px;
+  position: relative;
+}
+.tempus::before {
+  content: "";
+  position: absolute;
+  height: 1.2px;
+  width: 100%;
+  background: rgba(107, 104, 104, 0.247);
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: rgba(134, 126, 126, 0.685);
+}
+.tempus::after {
+  content: "";
+  position: absolute;
+  height: 1.2px;
+  width: 100%;
+  background: rgba(107, 104, 104, 0.247);
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: rgba(134, 126, 126, 0.685);
 }
 .tempus-img {
   background: url(./img/banner-2.jpg) center/cover;
   height: inherit;
   width: 100%;
 }
-@media (max-width: 800px) {
-  .tempus-img {
-    display: none;
-  }
+.get {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  position: relative;
+}
+.get::after {
+  content: "";
+  position: absolute;
+  height: 1.2px;
+  width: 100%;
+  background: rgba(107, 104, 104, 0.247);
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: rgba(134, 126, 126, 0.685);
+}
+form {
+  position: relative;
+  margin: 40px 200px;
+  height: 500px;
+}
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "name email"
+    "message message";
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  max-height: 200px;
+}
+.form-container input {
+  width: 100%;
+  margin-top: 20px;
+}
+#name,
+#email {
+  height: 30px;
+}
+/* label[for="name"] {
+  position: absolute;
+  top: -30px;
+  left: 25%;
+} */
+
+#message {
+  grid-area: message;
+  margin-top: 60px;
+  height: 250px;
+}
+input[type="submit"] {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: none;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(128, 128, 128, 0.199);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+}
+footer {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer i {
+  padding: 0 40px;
 }
