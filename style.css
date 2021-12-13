@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "font-1";
+  src: url(./Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: "font-1";
+}
+section p {
+  line-height: 30px;
+  font-size: 1.1rem;
+}
+section button {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: none;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(128, 128, 128, 0.199);
+}
+.run h1,
+.magna h2,
+.tempus h2 {
+  padding-bottom: 20px;
+}
+.run-text,
+.magna-text,
+.tempus-text {
+  margin: 20px;
+}
+.run {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  height: 800px;
+}
+.run h1 {
+  font-size: 3rem;
+}
+.run-img {
+  background: url(./img/banner.jpg) right/cover;
+  width: 100%;
+  height: inherit;
+}
+.magna {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  height: 400px;
+}
+
+.magna-img {
+  background: url(./img/banner-1.jpg) center/cover;
+  height: inherit;
+  width: 100%;
+}
+.tempus {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+  height: 400px;
+}
+.tempus-img {
+  background: url(./img/banner-2.jpg) center/cover;
+  height: inherit;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .tempus-img {
+    display: none;
+  }
+}
