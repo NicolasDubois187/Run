@@ -1,6 +1,6 @@
 @font-face {
   font-family: "font-1";
-  src: url(./Source_Sans_Pro/SourceSansPro-Regular.ttf);
+  src: url(./Source_Sans_Pro/SourceSansPro-Light.ttf);
 }
 * {
   margin: 0;
@@ -24,6 +24,15 @@ section button {
   border-style: solid;
   border-width: thin;
   border-color: rgba(128, 128, 128, 0.199);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+button:hover,
+input[type="submit"]:hover {
+  border: 1px solid skyblue;
+  color: skyblue;
 }
 .run h1,
 .magna h2,
@@ -113,6 +122,8 @@ section button {
   align-items: center;
   margin: 50px auto;
   position: relative;
+  height: 500px;
+  max-height: 500px;
 }
 .get::after {
   content: "";
@@ -127,40 +138,60 @@ section button {
 }
 form {
   position: relative;
-  margin: 40px 200px;
-  height: 500px;
 }
 .form-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 50px 50px 60px 200px;
   grid-template-areas:
-    "name email"
-    "message message";
+    "label1 label2"
+    "input1 input2"
+    "label3 label3"
+    "texta texta";
   gap: 10px;
+  width: 85%;
   max-width: 600px;
   margin: 0 auto;
-  max-height: 200px;
 }
-.form-container input {
+label {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
+}
+input,
+textarea {
+  border-radius: 4px;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 10px;
+}
+#mess {
+  grid-area: label3;
+}
+textarea {
+  grid-area: texta;
+  resize: none;
+}
+/* .form-container input {
   width: 100%;
   margin-top: 20px;
 }
 #name,
 #email {
   height: 30px;
-}
+} */
 /* label[for="name"] {
   position: absolute;
   top: -30px;
   left: 25%;
 } */
 
-#message {
+/* #message {
   grid-area: message;
   margin-top: 60px;
   height: 250px;
-}
+} */
 input[type="submit"] {
   padding: 10px 25px;
   border-radius: 20px;
@@ -172,13 +203,80 @@ input[type="submit"] {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 footer {
-  margin: 100px auto;
+  margin: 100px;
+}
+footer li {
+  border: 1px solid rgb(209, 209, 209);
+  margin: 0 30px;
+  border-radius: 150px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer i {
-  padding: 0 40px;
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  footer li {
+    margin: auto;
+  }
+}
+@media (max-width: 700px) {
+  .magna-img,
+  .tempus-img {
+    display: none;
+  }
+  .magna,
+  .tempus {
+    display: flex;
+  }
+}
+@media (max-width: 550px) {
+  footer li {
+    font-size: 0.8rem;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+  }
+}
+@media (max-width: 500px) {
+  footer li {
+    font-size: 0.7rem;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  input,
+  textarea {
+    margin: auto;
+  }
+}
+@media (max-width: 450px) {
+  footer li {
+    font-size: 0.7rem;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+  }
+}
+@media (max-width: 400px) {
+  footer li {
+    font-size: 0.7rem;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+  }
 }
