@@ -26,7 +26,6 @@ section button {
   border-color: rgba(128, 128, 128, 0.199);
   cursor: pointer;
   transition: 0.3s;
-  font-weight: bold;
   letter-spacing: 1px;
 }
 button:hover,
@@ -42,13 +41,13 @@ input[type="submit"]:hover {
 .run-text,
 .magna-text,
 .tempus-text {
-  margin: 20px;
+  margin: 40px;
 }
 .run {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
-  height: 800px;
+  height: 100vh;
 }
 .run h1 {
   font-size: 3rem;
@@ -62,7 +61,7 @@ input[type="submit"]:hover {
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
-  height: 400px;
+  height: 50vh;
   position: relative;
 }
 .magna::before {
@@ -86,7 +85,7 @@ input[type="submit"]:hover {
   display: grid;
   grid-template-columns: 70% 30%;
   align-items: center;
-  height: 400px;
+  height: 50vh;
   position: relative;
 }
 .tempus::before {
@@ -122,8 +121,7 @@ input[type="submit"]:hover {
   align-items: center;
   margin: 50px auto;
   position: relative;
-  height: 500px;
-  max-height: 500px;
+  height: 50vh;
 }
 .get::after {
   content: "";
@@ -136,9 +134,7 @@ input[type="submit"]:hover {
   transform: translateX(-50%);
   box-shadow: rgba(134, 126, 126, 0.685);
 }
-form {
-  position: relative;
-}
+
 .form-container {
   display: grid;
   justify-content: center;
@@ -174,25 +170,13 @@ textarea {
   grid-area: texta;
   resize: none;
 }
-/* .form-container input {
-  width: 100%;
-  margin-top: 20px;
-}
-#name,
-#email {
-  height: 30px;
-} */
+/* ************fonction peut servir*************** */
 /* label[for="name"] {
   position: absolute;
   top: -30px;
   left: 25%;
 } */
 
-/* #message {
-  grid-area: message;
-  margin-top: 60px;
-  height: 250px;
-} */
 input[type="submit"] {
   padding: 10px 25px;
   border-radius: 20px;
@@ -206,11 +190,11 @@ input[type="submit"] {
   bottom: 0px;
   cursor: pointer;
   transition: 0.3s;
-  font-weight: bold;
   letter-spacing: 1px;
 }
 footer {
-  margin: 100px;
+  margin: 100px auto;
+  width: 90%;
 }
 footer li {
   border: 1px solid rgb(209, 209, 209);
@@ -221,15 +205,21 @@ footer li {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
 footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+footer li:hover {
+  border: 1px solid skyblue;
+  color: skyblue;
+}
 @media (max-width: 900px) {
   .run {
-    height: 400px;
+    height: 50vh;
   }
 }
 @media (max-width: 800px) {
@@ -247,6 +237,13 @@ footer ul {
     display: flex;
   }
 }
+@media (max-width: 605px) {
+  .run {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+  }
+}
 @media (max-width: 550px) {
   footer li {
     font-size: 0.8rem;
@@ -256,16 +253,14 @@ footer ul {
   }
 }
 @media (max-width: 500px) {
+  footer {
+    margin-bottom: 50px;
+  }
   footer li {
     font-size: 0.7rem;
     width: 30px;
     height: 30px;
     margin: auto;
-  }
-  .run {
-    display: flex;
-    flex-direction: column;
-    height: 700px;
   }
 }
 @media (max-width: 480px) {
@@ -284,7 +279,11 @@ footer ul {
     margin: auto;
   }
 }
-
+@media (max-width: 440px) {
+  .form-container {
+    grid-template-columns: 48% 48%;
+  }
+}
 @media (max-width: 400px) {
   footer li {
     font-size: 0.7rem;
