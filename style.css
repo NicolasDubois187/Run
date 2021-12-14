@@ -141,6 +141,7 @@ form {
 }
 .form-container {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px 50px 60px 200px;
   grid-template-areas:
@@ -226,7 +227,11 @@ footer ul {
   justify-content: center;
   align-items: center;
 }
-
+@media (max-width: 900px) {
+  .run {
+    height: 400px;
+  }
+}
 @media (max-width: 800px) {
   footer li {
     margin: auto;
@@ -257,11 +262,18 @@ footer ul {
     height: 30px;
     margin: auto;
   }
+  .run {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+  }
 }
 @media (max-width: 480px) {
-  input,
-  textarea {
-    margin: auto;
+  .get {
+    width: auto;
+  }
+  .form {
+    width: auto;
   }
 }
 @media (max-width: 450px) {
@@ -272,6 +284,7 @@ footer ul {
     margin: auto;
   }
 }
+
 @media (max-width: 400px) {
   footer li {
     font-size: 0.7rem;
